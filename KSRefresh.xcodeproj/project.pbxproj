@@ -14,6 +14,12 @@
 		378418AF1ACF9B0200F17E07 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 378418AE1ACF9B0200F17E07 /* Images.xcassets */; };
 		378418B21ACF9B0200F17E07 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 378418B01ACF9B0200F17E07 /* LaunchScreen.xib */; };
 		378418BE1ACF9B0200F17E07 /* KSRefreshTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 378418BD1ACF9B0200F17E07 /* KSRefreshTests.m */; };
+		378418CA1ACF9B4D00F17E07 /* KSRefreshView.m in Sources */ = {isa = PBXBuildFile; fileRef = 378418C91ACF9B4D00F17E07 /* KSRefreshView.m */; };
+		378418CC1AD2074300F17E07 /* KSRefresh.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 378418CB1AD2074300F17E07 /* KSRefresh.bundle */; };
+		378418CF1AD208D500F17E07 /* KSDefaultHeadRefreshView.m in Sources */ = {isa = PBXBuildFile; fileRef = 378418CE1AD208D500F17E07 /* KSDefaultHeadRefreshView.m */; };
+		378418D21AD20AF200F17E07 /* UIScrollView+KS.m in Sources */ = {isa = PBXBuildFile; fileRef = 378418D11AD20AF200F17E07 /* UIScrollView+KS.m */; };
+		3784191C1AD21BB000F17E07 /* KSDefaultFootRefreshView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3784191B1AD21BB000F17E07 /* KSDefaultFootRefreshView.m */; };
+		3784191F1AD22DAD00F17E07 /* KSAutoFootRefreshView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3784191E1AD22DAD00F17E07 /* KSAutoFootRefreshView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +46,17 @@
 		378418B71ACF9B0200F17E07 /* KSRefreshTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KSRefreshTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		378418BC1ACF9B0200F17E07 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		378418BD1ACF9B0200F17E07 /* KSRefreshTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KSRefreshTests.m; sourceTree = "<group>"; };
+		378418C81ACF9B4D00F17E07 /* KSRefreshView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSRefreshView.h; sourceTree = "<group>"; };
+		378418C91ACF9B4D00F17E07 /* KSRefreshView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSRefreshView.m; sourceTree = "<group>"; };
+		378418CB1AD2074300F17E07 /* KSRefresh.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = KSRefresh.bundle; sourceTree = "<group>"; };
+		378418CD1AD208D500F17E07 /* KSDefaultHeadRefreshView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSDefaultHeadRefreshView.h; sourceTree = "<group>"; };
+		378418CE1AD208D500F17E07 /* KSDefaultHeadRefreshView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSDefaultHeadRefreshView.m; sourceTree = "<group>"; };
+		378418D01AD20AF200F17E07 /* UIScrollView+KS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+KS.h"; sourceTree = "<group>"; };
+		378418D11AD20AF200F17E07 /* UIScrollView+KS.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+KS.m"; sourceTree = "<group>"; };
+		3784191A1AD21BB000F17E07 /* KSDefaultFootRefreshView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSDefaultFootRefreshView.h; sourceTree = "<group>"; };
+		3784191B1AD21BB000F17E07 /* KSDefaultFootRefreshView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSDefaultFootRefreshView.m; sourceTree = "<group>"; };
+		3784191D1AD22DAD00F17E07 /* KSAutoFootRefreshView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSAutoFootRefreshView.h; sourceTree = "<group>"; };
+		3784191E1AD22DAD00F17E07 /* KSAutoFootRefreshView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSAutoFootRefreshView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +80,7 @@
 		378418951ACF9B0200F17E07 = {
 			isa = PBXGroup;
 			children = (
+				378418C71ACF9B0E00F17E07 /* src */,
 				378418A01ACF9B0200F17E07 /* KSRefresh */,
 				378418BA1ACF9B0200F17E07 /* KSRefreshTests */,
 				3784189F1ACF9B0200F17E07 /* Products */,
@@ -117,6 +135,24 @@
 				378418BC1ACF9B0200F17E07 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		378418C71ACF9B0E00F17E07 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				378418CB1AD2074300F17E07 /* KSRefresh.bundle */,
+				378418C81ACF9B4D00F17E07 /* KSRefreshView.h */,
+				378418C91ACF9B4D00F17E07 /* KSRefreshView.m */,
+				378418CD1AD208D500F17E07 /* KSDefaultHeadRefreshView.h */,
+				378418CE1AD208D500F17E07 /* KSDefaultHeadRefreshView.m */,
+				3784191A1AD21BB000F17E07 /* KSDefaultFootRefreshView.h */,
+				3784191B1AD21BB000F17E07 /* KSDefaultFootRefreshView.m */,
+				3784191D1AD22DAD00F17E07 /* KSAutoFootRefreshView.h */,
+				3784191E1AD22DAD00F17E07 /* KSAutoFootRefreshView.m */,
+				378418D01AD20AF200F17E07 /* UIScrollView+KS.h */,
+				378418D11AD20AF200F17E07 /* UIScrollView+KS.m */,
+			);
+			path = src;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -200,6 +236,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				378418AD1ACF9B0200F17E07 /* Main.storyboard in Resources */,
+				378418CC1AD2074300F17E07 /* KSRefresh.bundle in Resources */,
 				378418B21ACF9B0200F17E07 /* LaunchScreen.xib in Resources */,
 				378418AF1ACF9B0200F17E07 /* Images.xcassets in Resources */,
 			);
@@ -220,8 +257,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				378418AA1ACF9B0200F17E07 /* ViewController.m in Sources */,
+				3784191C1AD21BB000F17E07 /* KSDefaultFootRefreshView.m in Sources */,
 				378418A71ACF9B0200F17E07 /* AppDelegate.m in Sources */,
+				3784191F1AD22DAD00F17E07 /* KSAutoFootRefreshView.m in Sources */,
+				378418CF1AD208D500F17E07 /* KSDefaultHeadRefreshView.m in Sources */,
+				378418CA1ACF9B4D00F17E07 /* KSRefreshView.m in Sources */,
 				378418A41ACF9B0200F17E07 /* main.m in Sources */,
+				378418D21AD20AF200F17E07 /* UIScrollView+KS.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -344,6 +386,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = KSRefresh/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -354,6 +397,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = KSRefresh/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -412,6 +456,7 @@
 				378418C31ACF9B0200F17E07 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		378418C41ACF9B0200F17E07 /* Build configuration list for PBXNativeTarget "KSRefreshTests" */ = {
 			isa = XCConfigurationList;
@@ -420,6 +465,7 @@
 				378418C61ACF9B0200F17E07 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
