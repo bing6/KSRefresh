@@ -50,7 +50,7 @@
 - (void)addData
 {
     for (int i = 0; i < 15; i++) {
-        [self.dataSource addObject:@(i + 1)];
+        [self.dataSource addObject:@(self.dataSource.count + 1)];
     }
     
     [self.tableView reloadData];
