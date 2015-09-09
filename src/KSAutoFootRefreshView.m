@@ -89,6 +89,10 @@
         }
         case RefreshViewStateVisible:
         case RefreshViewStateTriggered:
+        {
+            [self setState:RefreshViewStateLoading];
+            break;
+        }
         case RefreshViewStateLoading:
         {
             [self.titleLabel setText:KSFootRefreshView_T_3];
