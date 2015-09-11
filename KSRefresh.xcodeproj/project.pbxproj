@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3708F7BF1BA279530054F05F /* d1.png in Resources */ = {isa = PBXBuildFile; fileRef = 3708F7BC1BA279530054F05F /* d1.png */; };
+		3708F7C01BA279530054F05F /* d2.png in Resources */ = {isa = PBXBuildFile; fileRef = 3708F7BD1BA279530054F05F /* d2.png */; };
+		3708F7C11BA279530054F05F /* d3.png in Resources */ = {isa = PBXBuildFile; fileRef = 3708F7BE1BA279530054F05F /* d3.png */; };
 		378418A41ACF9B0200F17E07 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 378418A31ACF9B0200F17E07 /* main.m */; };
 		378418A71ACF9B0200F17E07 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 378418A61ACF9B0200F17E07 /* AppDelegate.m */; };
 		378418AA1ACF9B0200F17E07 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 378418A91ACF9B0200F17E07 /* ViewController.m */; };
@@ -33,6 +36,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3708F7BC1BA279530054F05F /* d1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = d1.png; sourceTree = "<group>"; };
+		3708F7BD1BA279530054F05F /* d2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = d2.png; sourceTree = "<group>"; };
+		3708F7BE1BA279530054F05F /* d3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = d3.png; sourceTree = "<group>"; };
 		3784189E1ACF9B0200F17E07 /* KSRefresh.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KSRefresh.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		378418A21ACF9B0200F17E07 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		378418A31ACF9B0200F17E07 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -106,6 +112,9 @@
 				378418AB1ACF9B0200F17E07 /* Main.storyboard */,
 				378418AE1ACF9B0200F17E07 /* Images.xcassets */,
 				378418B01ACF9B0200F17E07 /* LaunchScreen.xib */,
+				3708F7BC1BA279530054F05F /* d1.png */,
+				3708F7BD1BA279530054F05F /* d2.png */,
+				3708F7BE1BA279530054F05F /* d3.png */,
 				378418A11ACF9B0200F17E07 /* Supporting Files */,
 			);
 			path = KSRefresh;
@@ -235,8 +244,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3708F7BF1BA279530054F05F /* d1.png in Resources */,
 				378418AD1ACF9B0200F17E07 /* Main.storyboard in Resources */,
 				378418CC1AD2074300F17E07 /* KSRefresh.bundle in Resources */,
+				3708F7C01BA279530054F05F /* d2.png in Resources */,
+				3708F7C11BA279530054F05F /* d3.png in Resources */,
 				378418B21ACF9B0200F17E07 /* LaunchScreen.xib in Resources */,
 				378418AF1ACF9B0200F17E07 /* Images.xcassets in Resources */,
 			);
