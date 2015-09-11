@@ -16,8 +16,8 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "KSRefresh"
-  s.version      = "0.3"
-  s.summary      = "基于FMDB的一个ORM解决方案"
+  s.version      = "0.4"
+  s.summary      = "上拉刷新与下拉刷新"
 
   s.description  = <<-DESC
                    A longer description of FMDBDataTable in Markdown format.
@@ -78,7 +78,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "https://github.com/bing6/KSRefresh.git", :tag => "0.3" }
+  s.source       = { :git => "https://github.com/bing6/KSRefresh.git", :tag => "0.4" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -105,7 +105,7 @@ Pod::Spec.new do |s|
 
   # s.resource  = "icon.png"
   # s.resources = "Resources/*.png"
-
+  s.resources = "src/KSRefresh.bundle"
   # s.preserve_paths = "FilesToSave", "MoreFilesToSave"
 
 
