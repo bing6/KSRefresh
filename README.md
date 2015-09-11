@@ -19,10 +19,16 @@
     self.tableView.footer         = [[KSDefaultFootRefreshView alloc] initWithDelegate:self]; //上拉刷新
     
 4.实现委托方法
+
     //当KSRefreshView.state 值为 KSRefreshViewStateLoading 触发
+    
     - (void)refreshViewDidLoading:(id)view {
         
     }
+
+#展示图片
+    
+    ![image](https://github.com/bing6/KSRefresh/raw/master/KSRefresh/d1.png)  
     
 #具体事例代码
  
