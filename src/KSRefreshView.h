@@ -18,11 +18,11 @@
  * @brief 刷新状态
  */
 typedef enum {
-    RefreshViewStateDefault = 1,    //默认
-    RefreshViewStateVisible,        //刷新视图已被显示到界面
-    RefreshViewStateTriggered,      //已经可以出发刷新委托事件
-    RefreshViewStateLoading         //正在加载
-} RefreshViewState;
+    KSRefreshViewStateDefault = 1,    //默认
+    KSRefreshViewStateVisible,        //刷新视图已被显示到界面
+    KSRefreshViewStateTriggered,      //已经可以出发刷新委托事件
+    KSRefreshViewStateLoading         //正在加载
+} KSRefreshViewState;
 
 /**
  * @brief 刷新委托
@@ -33,7 +33,7 @@ typedef enum {
 /**
  * @brief 刷新状态改变调用
  */
-- (void)refreshView:(id)view didChangeState:(RefreshViewState)state;
+- (void)refreshView:(id)view didChangeState:(KSRefreshViewState)state;
 /**
  * @brief 加载数据调用
  */
@@ -54,11 +54,16 @@ typedef enum {
 /**
  * @brief 刷新视图状态
  */
-@property (nonatomic, assign) RefreshViewState state;
+@property (nonatomic, assign) KSRefreshViewState state;
 /**
  * @brief 委托
  */
 @property (nonatomic, weak) id<KSRefreshViewDelegate> delegate;
+
+/**
+ * @brief 完成加载状态
+ */
+- (void)finishedLoading;
 
 @end
 

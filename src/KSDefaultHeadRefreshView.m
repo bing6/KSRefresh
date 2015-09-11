@@ -50,12 +50,12 @@
     return self;
 }
 
-- (void)setState:(RefreshViewState)state
+- (void)setState:(KSRefreshViewState)state
 {
     [super setState:state];
     
     switch (state) {
-        case RefreshViewStateDefault:
+        case KSRefreshViewStateDefault:
         {
             UIEdgeInsets curInsets = self.targetView.contentInset;
             curInsets.top = self.targetViewOriginalEdgeInsets.top;
@@ -67,7 +67,7 @@
             
             break;
         }
-        case RefreshViewStateVisible:
+        case KSRefreshViewStateVisible:
         {
             UIEdgeInsets curInsets = self.targetView.contentInset;
             curInsets.top = self.targetViewOriginalEdgeInsets.top;
@@ -79,13 +79,13 @@
             
             break;
         }
-        case RefreshViewStateTriggered:
+        case KSRefreshViewStateTriggered:
         {
             [self.titleLabel setText:KSHeadRefreshView_T_2];
             [self rotateArrow:M_PI hide:NO];
             break;
         }
-        case  RefreshViewStateLoading:
+        case  KSRefreshViewStateLoading:
         {
             [self.titleLabel setText:KSHeadRefreshView_T_3];
             [self.arrowImageView setAlpha:0];
@@ -120,7 +120,7 @@
     [UIView animateWithDuration:0.3 delay:0 options:UIViewAnimationOptionAllowUserInteraction|UIViewAnimationOptionBeginFromCurrentState animations:^{
         self.targetView.contentInset = contentInset;
     } completion:^(BOOL finished) {
-        if(self.state == RefreshViewStateDefault && contentInset.top == self.targetViewOriginalEdgeInsets.top)
+        if(self.state == KSRefreshViewStateDefault && contentInset.top == self.targetViewOriginalEdgeInsets.top)
             [UIView animateWithDuration:0.2 delay:0 options:UIViewAnimationOptionAllowUserInteraction animations:^{
                 self.arrowImageView.alpha = 0;
             } completion:NULL];

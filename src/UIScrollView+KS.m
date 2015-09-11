@@ -51,4 +51,17 @@ static void * MyKey2 = (void *)@"FootRefreshView";
 }
 
 
+- (void)headerFinishedLoading
+{
+    if ([self header]) {
+        [self.header finishedLoading];
+    }
+}
+
+- (void)footerFinishedLoading
+{
+    if ([self footer]) {
+        [self.footer finishedLoading];
+    }
+}
 @end

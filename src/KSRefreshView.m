@@ -36,7 +36,7 @@
     return self;
 }
 
-- (void)setState:(RefreshViewState)state
+- (void)setState:(KSRefreshViewState)state
 {
     _state = state;
     if ([self.delegate respondsToSelector:@selector(refreshView:didChangeState:)]) {
@@ -58,7 +58,7 @@
 
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
 {
-    if (self.state == RefreshViewStateLoading) {
+    if (self.state == KSRefreshViewStateLoading) {
         return;
     }
     
@@ -67,15 +67,20 @@
     
     CGFloat offsetThreshold = self.frame.origin.y - original.top;
     
-    if (!self.targetView.isDragging && self.state == RefreshViewStateTriggered) {
-        self.state = RefreshViewStateLoading;
-    } else if (point.y > offsetThreshold && point.y < - original.top && self.targetView.isDragging && self.state != RefreshViewStateLoading) {
-        self.state = RefreshViewStateVisible;
-    } else if (point.y < offsetThreshold && self.targetView.isDragging && self.state == RefreshViewStateVisible) {
-        self.state = RefreshViewStateTriggered;
-    } else if (point.y >= -original.top && self.state != RefreshViewStateDefault) {
-        self.state = RefreshViewStateDefault;
+    if (!self.targetView.isDragging && self.state == KSRefreshViewStateTriggered) {
+        self.state = KSRefreshViewStateLoading;
+    } else if (point.y > offsetThreshold && point.y < - original.top && self.targetView.isDragging && self.state != KSRefreshViewStateLoading) {
+        self.state = KSRefreshViewStateVisible;
+    } else if (point.y < offsetThreshold && self.targetView.isDragging && self.state == KSRefreshViewStateVisible) {
+        self.state = KSRefreshViewStateTriggered;
+    } else if (point.y >= -original.top && self.state != KSRefreshViewStateDefault) {
+        self.state = KSRefreshViewStateDefault;
     }
+}
+
+- (void)finishedLoading
+{
+    [self setState:KSRefreshViewStateDefault];
 }
 
 @end
@@ -109,7 +114,7 @@
     return self;
 }
 
-- (void)setState:(RefreshViewState)state
+- (void)setState:(KSRefreshViewState)state
 {
     _state = state;
     if ([self.delegate respondsToSelector:@selector(refreshView:didChangeState:)]) {
@@ -134,7 +139,7 @@
 {
     if ([keyPath isEqualToString:@"contentOffset"]) {
         
-        if (self.hidden || self.isLastPage || RefreshViewStateLoading == self.state) {
+        if (self.hidden || self.isLastPage || KSRefreshViewStateLoading == self.state) {
             return;
         }
         
@@ -143,14 +148,14 @@
         CGFloat offsetThreshold = self.frame.origin.y;
         CGFloat currentY        = point.y + self.targetView.frame.size.height;
         
-        if (self.targetView.isDragging == NO && self.state == RefreshViewStateTriggered) {
-            self.state = RefreshViewStateLoading;
-        } else if (self.targetView.isDragging && currentY > offsetThreshold && currentY < offsetThreshold + KSRefreshView_Height && self.state != RefreshViewStateLoading) {
-            self.state = RefreshViewStateVisible;
-        } else if (self.targetView.isDragging && currentY >= (offsetThreshold + KSRefreshView_Height) && self.state == RefreshViewStateVisible) {
-            self.state = RefreshViewStateTriggered;
-        } else if (currentY <= offsetThreshold && self.state != RefreshViewStateDefault && self.state != RefreshViewStateLoading) {
-            self.state = RefreshViewStateDefault;
+        if (self.targetView.isDragging == NO && self.state == KSRefreshViewStateTriggered) {
+            self.state = KSRefreshViewStateLoading;
+        } else if (self.targetView.isDragging && currentY > offsetThreshold && currentY < offsetThreshold + KSRefreshView_Height && self.state != KSRefreshViewStateLoading) {
+            self.state = KSRefreshViewStateVisible;
+        } else if (self.targetView.isDragging && currentY >= (offsetThreshold + KSRefreshView_Height) && self.state == KSRefreshViewStateVisible) {
+            self.state = KSRefreshViewStateTriggered;
+        } else if (currentY <= offsetThreshold && self.state != KSRefreshViewStateDefault && self.state != KSRefreshViewStateLoading) {
+            self.state = KSRefreshViewStateDefault;
         }
         
         return;
@@ -170,6 +175,10 @@
     }
 }
 
+- (void)finishedLoading
+{
+    [self setState:KSRefreshViewStateDefault];
+}
 
 @end
 

@@ -59,4 +59,7 @@
 @property (nonatomic, strong) KSHeadRefreshView * header;
 @property (nonatomic, strong) KSFootRefreshView * footer;
 
+- (void)headerFinishedLoading;
+- (void)footerFinishedLoading;
+
 @end

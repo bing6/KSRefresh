@@ -54,7 +54,7 @@
 {
     if (isLastPage) {
         
-        [self setValue:@(RefreshViewStateDefault) forKeyPath:@"_state"];
+        [self setValue:@(KSRefreshViewStateDefault) forKeyPath:@"_state"];
         [self.titleLabel setText:KSFootRefreshView_T_4];
         [self.indicatorView stopAnimating];
         
@@ -71,7 +71,7 @@
     _isLastPage = isLastPage;
 }
 
-- (void)setState:(RefreshViewState)state
+- (void)setState:(KSRefreshViewState)state
 {
     if (_isLastPage) {
         return;
@@ -80,20 +80,20 @@
     [super setState:state];
     
     switch (state) {
-        case RefreshViewStateDefault:
+        case KSRefreshViewStateDefault:
         {
             [self.titleLabel setText:KSFootRefreshView_T_1];
             [self.indicatorView stopAnimating];
             
             break;
         }
-        case RefreshViewStateVisible:
-        case RefreshViewStateTriggered:
+        case KSRefreshViewStateVisible:
+        case KSRefreshViewStateTriggered:
         {
-            [self setState:RefreshViewStateLoading];
+            [self setState:KSRefreshViewStateLoading];
             break;
         }
-        case RefreshViewStateLoading:
+        case KSRefreshViewStateLoading:
         {
             [self.titleLabel setText:KSFootRefreshView_T_3];
             [self.indicatorView startAnimating];
