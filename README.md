@@ -173,4 +173,4 @@
     @end
     
 #Installation
-    pod 'KSRefresh', '~> 0.3'
+    pod 'KSRefresh', '~> 0.4'
