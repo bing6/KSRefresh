@@ -1,4 +1,7 @@
-# 这是一个下拉刷新、上拉刷新以及底部自动刷新组件,使用方便简单。
+#这玩意是干啥的
+    这是一个下拉刷新、上拉刷新以及底部自动刷新组件,并可以能过继承KSHeadRefreshView或KSFootRefreshView实现自定义的刷新视图,使用方便简单,扩展也比较容易。
+    
+#如何使用
 
 1.首先需要保证navigationBar.translucent属性设置为NO
 
