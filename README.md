@@ -28,7 +28,7 @@
 
 #展示图片
     
-    ![image](https://github.com/bing6/KSRefresh/raw/master/KSRefresh/d1.png)  
+    ![image](http://github.com/bing6/KSRefresh/raw/master/KSRefresh/KSRefresh/d1.png)  
     
 #具体事例代码
  
