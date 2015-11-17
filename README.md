@@ -15,14 +15,17 @@
     
 3.对tableView对象添加上拉或下拉刷新View
 
-    self.tableView.header         = [[KSDefaultHeadRefreshView alloc] initWithDelegate:self]; //下拉刷新
-    self.tableView.footer         = [[KSDefaultFootRefreshView alloc] initWithDelegate:self]; //上拉刷新
+    self.tableView.header = [[KSDefaultHeadRefreshView alloc] initWithDelegate:self]; //下拉刷新
+    self.tableView.footer = [[KSDefaultFootRefreshView alloc] initWithDelegate:self]; //上拉刷新
     
 4.实现委托方法
+
     //当KSRefreshView.state 值为 KSRefreshViewStateLoading 触发
+    
     - (void)refreshViewDidLoading:(id)view {
         
     }
+
     
 #具体事例代码
  
