@@ -8,7 +8,7 @@
 
 #import "KSAutoFootRefreshView.h"
 
-#define KSFootRefreshView_T_1 @"加载更多数据"
+#define KSFootRefreshView_T_1 @""
 //#define KSFootRefreshView_T_2 @"加载更多数据"
 #define KSFootRefreshView_T_3 @""
 #define KSFootRefreshView_T_4 @"已无更新的数据"

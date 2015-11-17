@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "KSRefresh"
-  s.version      = "0.4"
+  s.version      = "0.4.1"
   s.summary      = "上拉刷新与下拉刷新"
 
   s.description  = <<-DESC
@@ -78,7 +78,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "https://github.com/bing6/KSRefresh.git", :tag => "0.4" }
+  s.source       = { :git => "https://github.com/bing6/KSRefresh.git", :tag => "0.4.1" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
