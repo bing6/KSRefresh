@@ -8,8 +8,8 @@
 
 #import "KSDefaultHeadRefreshView.h"
 
-#define KSHeadRefreshView_T_1 @"下拉刷新"
-#define KSHeadRefreshView_T_2 @"松开刷新"
+#define KSHeadRefreshView_T_1 @"下拉立即刷新"
+#define KSHeadRefreshView_T_2 @"松开可以刷新"
 #define KSHeadRefreshView_T_3 @"加载中..."
 
 @interface KSDefaultHeadRefreshView ()

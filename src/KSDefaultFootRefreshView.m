@@ -9,9 +9,9 @@
 #import "KSDefaultFootRefreshView.h"
 
 #define KSFootRefreshView_T_1 @"加载更多数据"
-#define KSFootRefreshView_T_2 @"松开刷新"
+#define KSFootRefreshView_T_2 @"松开立即刷新"
 #define KSFootRefreshView_T_3 @""
-#define KSFootRefreshView_T_4 @"已无更新的数据"
+#define KSFootRefreshView_T_4 @"已经全部加载完毕"
 
 @interface KSDefaultFootRefreshView ()
 
